@@ -14,11 +14,17 @@ new Vue({
 new Vue({
     el: '#second',
     data:{
-        title: 'You have accessed an attribute on data'
+        header: 'Playing with Vue',
+        title: 'You have accessed an attribute on data',
+        link: 'http://google.com'
     },
     methods: {
         sayHello: function(){
             return this.title
+        },
+        newHeader: function(){
+            this.header = "Playing With Vue Again";
+            return this.header
         }
     }
 });

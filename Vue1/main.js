@@ -11,3 +11,14 @@ new Vue({
 });
 
 
+new Vue({
+    el: '#second',
+    data:{
+        title: 'You have accessed an attribute on data'
+    },
+    methods: {
+        sayHello: function(){
+            return this.title
+        }
+    }
+});

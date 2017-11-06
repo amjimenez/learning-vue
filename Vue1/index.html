@@ -12,11 +12,13 @@
 
 <div id="main">
     <input type="text" v-on:input="changeTitle">
-    <p>{{ title }}</p>
+    <p> {{ title }} </p>
 </div>
 
 <div id="second">
-    <p>{{ sayHello() }}</p>
+    <h1 v-once>{{ header }}</h1>
+    <p>{{ sayHello() }} - <a v-bind:href="link">Google</a></p>
+    <p>{{ newHeader() }}</p>
 </div>
 
 <script src="main.js"></script>

@@ -19,7 +19,9 @@
     <h1 v-once>{{ header }}</h1>
     <p>{{ sayHello() }} - <a v-bind:href="link">Google</a></p>
     <p>{{ newHeader() }}</p>
+    <p v-html="completeLink"></p>
 </div>
+
 
 <script src="main.js"></script>
 </body>

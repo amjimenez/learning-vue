@@ -16,7 +16,8 @@ new Vue({
     data:{
         header: 'Playing with Vue',
         title: 'You have accessed an attribute on data',
-        link: 'http://google.com'
+        link: 'http://google.com',
+        completeLink: '<a href="google.com.mx">Google</a>'
     },
     methods: {
         sayHello: function(){

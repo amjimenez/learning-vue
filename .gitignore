@@ -1,5 +1,4 @@
-.idea/*
-node_modules/*
+**/.idea/*
 **/.cache
 **/node_modules
 **/package-lock.json

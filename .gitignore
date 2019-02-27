@@ -1,6 +1,6 @@
 .idea/*
 node_modules/*
-.idea/
-Vue2/node_modules/*
+**/node_modules
 **/package-lock.json
-Vue2/public/dist/
+**/public/dist/
+

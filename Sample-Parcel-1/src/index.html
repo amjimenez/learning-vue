@@ -9,6 +9,13 @@
 <body>
   <div id="app">
     {{name}}
+    <p v-html="finishedLink"></p>
+    <button v-on:click="increase(2, $event)">Increase</button>
+    <div>{{counter}}</div>
+    <p v-on:mousemove="updateCoordinates">
+      Coordenadas: {{x}} / {{y}}
+      <span v-on:mousemove="dummy">DEAD SPOT</span>
+    </p>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="./index.js"></script>

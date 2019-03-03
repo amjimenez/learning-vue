@@ -11,11 +11,21 @@
     {{name}}
     <p v-html="finishedLink"></p>
     <button v-on:click="increase(2, $event)">Increase</button>
+    <button v-on:click="counter++">Increase</button>
     <div>{{counter}}</div>
+    <div>{{counter  > 10 ? "Greater than 10": "Smaller than 10"}}</div>
     <p v-on:mousemove="updateCoordinates">
       Coordenadas: {{x}} / {{y}}
       <span v-on:mousemove.stop="">DEAD SPOT</span>
     </p>
+    <input type="text" @keyup.enter.space="alertMe">
+
+    <div>
+        <button v-on:click="otherCounter++">Increase Simple</button>
+        <button v-on:click="otherCounter--">Decrease simple</button>
+    </div>
+    <div>{{otherCounter}}</div>
+    <div> result: {{result()}} | {{output}}</div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="./index.js"></script>

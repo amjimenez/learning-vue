@@ -118,15 +118,29 @@ new Vue({
     finishedLink: '<a href="http://www.google.com">Google</a>',
     counter: 0,
     x: 0,
-    y: 0
+    y: 0,
+    otherCounter: 0
+  },
+  computed: {
+    output: function output() {
+      console.log('computed');
+      return this.otherCounter > 5 ? 'Greater than 5' : 'Smaller than 5';
+    }
   },
   methods: {
     increase: function increase(step, event) {
       this.counter += step;
     },
+    result: function result() {
+      console.log('method');
+      return this.otherCounter > 5 ? 'Greater than 5' : 'Smaller than 5';
+    },
     updateCoordinates: function updateCoordinates(event) {
       this.x = event.clientX;
       this.y = event.clientY;
+    },
+    alertMe: function alertMe() {
+      alert('Alert!');
     }
   }
 });

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    {{name}}
+    <p v-html="finishedLink"></p>
+    <button v-on:click="increase(2, $event)">Increase</button>
+    <button v-on:click="counter++">Increase</button>
+    <div>{{counter}}</div>
+    <div>{{counter  > 10 ? "Greater than 10": "Smaller than 10"}}</div>
+    <p v-on:mousemove="updateCoordinates">
+      Coordenadas: {{x}} / {{y}}
+      <span v-on:mousemove.stop="">DEAD SPOT</span>
+    </p>
+    <input type="text" @keyup.enter.space="alertMe">
+
+    <div>
+        <button v-on:click="otherCounter++">Increase Simple</button>
+        <button v-on:click="otherCounter--">Decrease simple</button>
+    </div>
+    <div>{{otherCounter}}</div>
+    <div> result: {{result()}} | {{output}}</div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="/src.e31bb0bc.js"></script>
+</body>
+</html>
